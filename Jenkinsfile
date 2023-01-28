@@ -25,3 +25,11 @@ pipeline {
             }
         }
     }
+	post
+	{
+		always
+		{
+			emailext body: 'summary', replyTo: 'vasanthajalaja4@gmail.com', subject: 'Pipeline-Notify', to: 'vasanthajalaja4@gmail.com'
+		}
+	}
+}
